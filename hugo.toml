@@ -1,0 +1,4 @@
+baseURL = 'https://edu-transformer.github.io/'
+languageCode = 'en-us'
+title = 'edu transformer'
+theme = 'et-theme'
