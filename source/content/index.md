@@ -8,3 +8,5 @@ Technologia zmienia nasz świat z prędkością łączy internetowych,  tymczase
 Kierujemy się zasadą "zaangażuj mnie, a zrozumiem". W szybko zmieniającym się świecie wszyscy jesteśmy uczniami.
 
 Chcemy zrozumieć rzeczywistość i poczuć, że mamy w niej głos. Dołącz do nas. Pracuj samodzielnie lub w grupie, badaj, eksperymentuj, dyskutuj. A my? Zapewnimy Ci wsparcie, ekspertów i platformę do dzielenia się swoimi odkryciami.
+
+...
