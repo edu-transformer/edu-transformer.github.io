@@ -6,7 +6,7 @@
     --color-white: rgb(var(--rgb-white));
     --color-grey-light: rgb(var(--rgb-grey-light));
     --font-family: 'IBM Plex Mono', monospace;
-    --font-size: calc(1.2em + 0.8vw);
+    --font-size: calc(1.8em + 0.8vw);
     --line-height: calc(1.4em + 0.8vw);
     --spacing: 0.75em;
 }
