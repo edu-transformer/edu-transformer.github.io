@@ -6,16 +6,9 @@
     --color-white: rgb(var(--rgb-white));
     --color-grey-light: rgb(var(--rgb-grey-light));
     --font-family: 'IBM Plex Mono', monospace;
-    --font-size: calc(1em + 1vw);
-    --line-height: calc(1.3em + 1vw);
+    --font-size: calc(1.2em + 0.8vw);
+    --line-height: calc(1.4em + 0.8vw);
     --spacing: 0.75em;
-}
-
-@media (min-width: 64em) {
-    :root {
-        --font-size: calc(1.25em + 1vw);
-        --line-height: 1.3em;
-    }
 }
 
 html {
@@ -34,6 +27,10 @@ body {
 }
 
 @media (min-width: 1024px) {
+    :root {
+        --font-size: calc(1.2em + 0.8vw);
+        --line-height: 1.4em;
+    }
     main {
         max-width: 50ch;
     }
