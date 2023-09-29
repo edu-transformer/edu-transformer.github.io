@@ -1,0 +1,58 @@
+:root {
+    --rgb-black: 0, 0, 0;
+    --rgb-white: 255, 255, 255;
+    --rgb-grey-light: 210, 216, 222;
+    --color-black: rgb(var(--rgb-black));
+    --color-white: rgb(var(--rgb-white));
+    --color-grey-light: rgb(var(--rgb-grey-light));
+    --font-family: 'IBM Plex Mono', monospace;
+    --font-size: calc(1em + 1vw);
+    --line-height: calc(1.3em + 1vw);
+    --spacing: 0.75em;
+}
+
+@media (min-width: 64em) {
+    :root {
+        --font-size: calc(1.25em + 1vw);
+        --line-height: 1.3em;
+    }
+}
+
+html {
+    background: var(--color-black);
+    font-size: 16px;
+}
+
+body {
+    background: var(--color-black);
+    color: var(--color-grey-light);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    overflow-x: hidden;
+    margin: 2em var(--spacing) 4.5em var(--spacing);
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 50ch;
+    }
+}
+
+a {
+    color: var(--color-white);
+    font-weight: 700;
+    letter-spacing: normal;
+    text-decoration: underline;
+    text-decoration-thickness: 0.09em;
+    text-underline-offset: 0.09em
+}
+
+em,i {
+    font-style: italic
+}
+
+strong,b {
+    color: var(--color-white);
+    font-weight: 700
+}
