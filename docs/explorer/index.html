@@ -4,7 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unknown Explorer: Passion and Curiosity about the World</title>
     <meta name="description" content="Instead of merely taking in information, let&#39;s focus on deepening understanding driven by passion and curiosity.">
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link id="base-style" rel="stylesheet" href="/css/base-styles.css">
+    <script>
+    
+    var savedStyle = localStorage.getItem("selectedStyle") || "/css/empty-styles.css";
+    
+    var linkElement = document.createElement("link");
+    linkElement.id = "transformer-style";
+    linkElement.rel = "stylesheet";
+    linkElement.href = savedStyle;
+    
+    document.head.appendChild(linkElement);
+</script>
+
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QXXGG6VL1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -15,12 +28,42 @@
 </script>
 </head>
 <body>
-    <header>
+    <header>        
+        <a href="#" id="transformer-action">T</a>
+<script>    
+    
+    document.getElementById("transformer-action").addEventListener("click", function() {
+        var additionalStyles = [
+            "/css/empty-styles.css",
+            "/css/blue-bg-styles.css",
+            "/css/green-bg-styles.css",
+            "/css/orange-bg-styles.css",
+            "/css/purple-bg-styles.css",
+            
+        ];
+    
+        var currentStyle = localStorage.getItem("selectedStyle") || additionalStyles[0];
+        var currentIndex = additionalStyles.indexOf(currentStyle);
+        
+        
+        var nextStyle = additionalStyles[(currentIndex + 1) % additionalStyles.length];
+
+        document.getElementById("transformer-style").setAttribute("href", nextStyle);
+
+        
+        localStorage.setItem("selectedStyle", nextStyle);
+    });
+</script>
+
+
+  
+        <nav>
         
         <a href="https://edu-transformer.github.io/en" class="active-lang">EN</a>
         
         <a href="https://edu-transformer.github.io/pl" class="">PL</a>
-        
+                      
+        </nav>
     </header>
              
     

@@ -4,14 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
     <meta name="description" content="{{ .Description }}">
-    <link rel="stylesheet" href="/css/styles.css"> 
+    <link id="base-style" rel="stylesheet" href="/css/base-styles.css">
+    {{ partial "style-loader.html" . }}
     {{ partial "analytics" . }}
 </head>
 <body>
-    <header>
+    <header>        
+        {{ partial "transformer"}}  
+        <nav>
         {{ range .Site.Languages }}
         <a href="{{ $.Site.BaseURL }}{{ .Lang }}" class="{{ if eq $.Page.Lang .Lang }}active-lang{{ end }}">{{ .Title }}</a>
-        {{ end }}
+        {{ end }}              
+        </nav>
     </header>
              
     {{ block "main" . }}{{ end }}

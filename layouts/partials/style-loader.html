@@ -1,0 +1,12 @@
+<script>
+    // Immediately apply the saved style from localStorage or set default style
+    var savedStyle = localStorage.getItem("selectedStyle") || "/css/empty-styles.css";
+    
+    var linkElement = document.createElement("link");
+    linkElement.id = "transformer-style";
+    linkElement.rel = "stylesheet";
+    linkElement.href = savedStyle;
+    
+    document.head.appendChild(linkElement);
+</script>
+

@@ -1,0 +1,27 @@
+<a href="#" id="transformer-action">T</a>
+<script>    
+    // Add an event listener to the "T" button
+    document.getElementById("transformer-action").addEventListener("click", function() {
+        var additionalStyles = [
+            "/css/empty-styles.css",
+            "/css/blue-bg-styles.css",
+            "/css/green-bg-styles.css",
+            "/css/orange-bg-styles.css",
+            "/css/purple-bg-styles.css",
+            // ... add paths to other stylesheets if available
+        ];
+    
+        var currentStyle = localStorage.getItem("selectedStyle") || additionalStyles[0];
+        var currentIndex = additionalStyles.indexOf(currentStyle);
+        
+        // Get the next style. If current style is the last one, get the first style from the list.
+        var nextStyle = additionalStyles[(currentIndex + 1) % additionalStyles.length];
+
+        document.getElementById("transformer-style").setAttribute("href", nextStyle);
+
+        // Save the selected style to localStorage
+        localStorage.setItem("selectedStyle", nextStyle);
+    });
+</script>
+
+
