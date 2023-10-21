@@ -14,6 +14,18 @@
                 href="https://edu-transformer.github.io/platform/"
                 />
   </url><url>
+    <loc>https://edu-transformer.github.io/abs/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl-pl"
+                href="https://edu-transformer.github.io/pl/abs/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://edu-transformer.github.io/abs/"
+                />
+  </url><url>
     <loc>https://edu-transformer.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -36,6 +48,18 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://edu-transformer.github.io/"
+                />
+  </url><url>
+    <loc>https://edu-transformer.github.io/abs/2310.00101/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl-pl"
+                href="https://edu-transformer.github.io/pl/abs/2310.00101/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://edu-transformer.github.io/abs/2310.00101/"
                 />
   </url><url>
     <loc>https://edu-transformer.github.io/get-involved/</loc>
@@ -96,6 +120,18 @@
                 rel="alternate"
                 hreflang="en-us"
                 href="https://edu-transformer.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://edu-transformer.github.io/abs/2310.00001/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="pl-pl"
+                href="https://edu-transformer.github.io/pl/abs/2310.00001/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en-us"
+                href="https://edu-transformer.github.io/abs/2310.00001/"
                 />
   </url><url>
     <loc>https://edu-transformer.github.io/explorer/</loc>
