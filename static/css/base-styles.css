@@ -114,3 +114,8 @@ nav {
     position: absolute;
     right: var(--spacing);
 }
+
+.reference {
+    font-size: var(--font-size-x-small); 
+    line-height: 1;
+}
