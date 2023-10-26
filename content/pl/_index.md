@@ -3,7 +3,7 @@ title: "Edu Transformer"
 description: "Technologia zmienia świat szybko, a edukacja ewoluuje powoli. Nie czekaj – działaj."
 ---
 
-Technologia zmienia nasz świat szybko, tymczasem zmiany w edukacji przychodzą powoli.{{< sup 1 2310.00001 >}} Zamiast czekać chcemy działać.
+Technologia zmienia nasz świat szybko, tymczasem zmiany w edukacji przychodzą powoli.{{< sup "1" "./abs/2310.0001" >}} Zamiast czekać chcemy działać.
 
 Kierujemy się zasadą: 'Zaangażuj mnie, a zrozumiem'. W szybko zmieniającym się świecie wszyscy jesteśmy uczniami.
 

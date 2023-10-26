@@ -3,7 +3,7 @@ title: "Edu Transformer"
 description: "Technology is changing our world rapidly, while education evolves slowly. Don't just wait – act"
 ---
 
-Technology is changing our world rapidly, yet changes in education come slowly.{{< sup 1 2310.00001 >}} Instead of waiting, we want to act.
+Technology is changing our world rapidly, yet changes in education come slowly.{{< sup "1" "./abs/2310.0001" >}} Instead of waiting, we want to act.
 
 We live by the principle: 'Engage me, and I will understand'. In this fast-changing world, we are all learners.
 

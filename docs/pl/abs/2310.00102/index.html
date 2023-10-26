@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myślenie Jest Wszystkim Czego Potrzebujesz</title>
+    <meta name="description" content="">
+    <link id="base-style" rel="stylesheet" href="/css/base-styles.css">
+    <script>
+    
+    var savedStyle = localStorage.getItem("selectedStyle") || "/css/empty-styles.css";
+    
+    var linkElement = document.createElement("link");
+    linkElement.id = "transformer-style";
+    linkElement.rel = "stylesheet";
+    linkElement.href = savedStyle;
+    
+    document.head.appendChild(linkElement);
+</script>
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QXXGG6VL1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5QXXGG6VL1');
+</script>
+</head>
+<body>
+    <header>        
+        <a href="#" id="transformer-action">T</a>
+<script>    
+    
+    document.getElementById("transformer-action").addEventListener("click", function() {
+        var additionalStyles = [
+            "/css/empty-styles.css",
+            "/css/blue-bg-styles.css",
+            "/css/green-bg-styles.css",
+            "/css/orange-bg-styles.css",
+            "/css/purple-bg-styles.css",
+            
+        ];
+    
+        var currentStyle = localStorage.getItem("selectedStyle") || additionalStyles[0];
+        var currentIndex = additionalStyles.indexOf(currentStyle);
+        
+        
+        var nextStyle = additionalStyles[(currentIndex + 1) % additionalStyles.length];
+
+        document.getElementById("transformer-style").setAttribute("href", nextStyle);
+
+        
+        localStorage.setItem("selectedStyle", nextStyle);
+    });
+</script>
+
+
+  
+        <nav>
+        
+        <a href="https://edu-transformer.github.io/en" class="">EN</a>
+        
+        <a href="https://edu-transformer.github.io/pl" class="active-lang">PL</a>
+                      
+        </nav>
+    </header>
+             
+    
+    <main><p>Szkic artykułu</p>
+<p>Temat: Myślenie jest wszystkim czego potrzebujesz</p>
+<p>Streszczenie:</p>
+<p>Eksploruję temat edukacji i technologii (w szczególności AI) ponieważ:</p>
+<ul>
+<li>Od 18 lat zajmuję się profesjonalnie oprogramowaniem.</li>
+<li>Od kilku lat przyglądam się edukacji swoich dzieci.</li>
+<li>Od stycznia 2023 roku śledzę rozwój modeli LLM</li>
+<li>We wrześniu 2023 ukończyłem kurs: edX Large Language Models: Application through Production</li>
+</ul>
+<p>Zgłębiając temat edukacji i AI zrozumiałem jak dużym wyzwaniem dla edukacji jest gwałtowny postęp technologiczny. Wyzwanie jest tak duże, że nie wiadomo od czego zacząć. Obserwując jak działa wymiana myśli naukowej napędzająca postęp technologiczny doszedłem do wniosku, że warto zastosować podobny, ale bardziej przystępny mechanizm dla edukacji.</p>
+<h3 id="alignment-of-technology-science-and-education">Alignment of Technology, Science and Education</h3>
+<p>Co zrobiłem: zaczałem myśleć o wyzwaniu, zacząłem wchodzić w niego coraz głębiej [Karpathy]. Przez czytanie książek [DziecięcaMatematyka] [StolenFocus], kurs [edX], YT [LexWolfram], oglądanie serii popularno naukowych na platformach Vod [BrainGames]. Ograniczyłem notyfikacje (tryb koncentracji przez 24h). Jednocześnie zaangażowałem się w działanie [DesignThinking]. Zacząłem od rozmów w najbliższym środowisku (rodzina, znajomi, lokalna szkoła). Rozmowy te doprowadziły mnie do warsztatów dla nauczycieli, wykładu inauguracyjnego i projektu [SztucznaInteligencjaWSluzbieEdukacji] w SLO5.</p>
+<p>Wyniki. Jezyk nauki jest trudny [DawidKielak-język_nauki_jest_zbyt_skomplikowany_potrzebna_edukacja_dla_wszystkich]. Książki takie jak [AtomicHabitts] [StolenFocus] pomagają zrozumieć sens badań naukowych. Ich popularność wskazuje na duże potrzeby aby zasypywać lukę pomiędzy nauką a życiem. Widać także inny wzorzec. Obydwaj autorzy musieli zacząć od stawienia czoła &lsquo;problemowi smartphona&rsquo;: [1-Asystentka] [2-odciecie]<br>
+Książki mają też swoje ograniczenia. Są niepersonalizowalne [OrailyGithub] i niezmienne [Karpathy]. Możliwość zdobycie własnego doświadczenia w przypadku papierowych ćwiczeń jest istotnie ograniczona [PapierowaMatematyka]. Obecna technologia ma potencjał aby zaadresować ograniczenia związazne z personalizacją oraz zmiennością. Może też przekroczyć ograniczenia papierowej edukacji w zakresie zdobywania własnego doświadczenia. Jedna
+k obecnie przepaść pomiędzy nauką napędzającą postęp technologiczny a edukacją jest ogromna.</p>
+<p>Co dalej. Skoro mechanizmamy napędzające postęp naukowy i techonologiczny działają tak dobrze to dlaczego nie zastosować ich w edukacji?</p>
+<p>GPT pomaga mi:</p>
+<ul>
+<li>Zaczać (czesto najtrudniej jest zacząć od czystej kartki)</li>
+<li>Prowadzić proces myślowy / Prowadzić rozważania / myśleć o swoim myśleniu (Efekt Sherlocka i Holmesa)</li>
+<li>Pisać (np. znaleść odpowiednie słowa, zdania)</li>
+<li>Czytać (np. podsumować długi dług lub zagmatfany tekst, przetłumaczyć z &lsquo;polskiego/angielskiego&rsquo; na &rsquo;nasze&rsquo;)</li>
+<li>Tworzyć oprogramowanie (np. strona internetowa)</li>
+</ul>
+</main>
+    <a href="/pl/">&#8617;</a>
+
+</body>
+</html>
