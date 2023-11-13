@@ -4,20 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Involved</title>
     <meta name="description" content="We are open to more schools and people.">
-    <link id="base-style" rel="stylesheet" href="/css/base-styles.css">
+    <link id="base-style" rel="stylesheet" href="/css/styles.css">
     <script>
-    
-    var savedStyle = localStorage.getItem("selectedStyle") || "/css/empty-styles.css";
-    
-    var linkElement = document.createElement("link");
-    linkElement.id = "transformer-style";
-    linkElement.rel = "stylesheet";
-    linkElement.href = savedStyle;
-    
-    document.head.appendChild(linkElement);
+    document.addEventListener("DOMContentLoaded", function() {
+        var root = document.documentElement;
+        
+        
+        var selectedTheme = localStorage.getItem("selectedTheme");
+        
+        
+        if (selectedTheme) {
+            root.style.setProperty('--color-background', selectedTheme);
+        }
+    });
 </script>
-
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QXXGG6VL1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -29,33 +29,33 @@
 </head>
 <body>
     <header>        
-        <a href="#" id="transformer-action">T</a>
-<script>    
+        <a href="#" id="theme-changer">T</a>
+<script>
     
-    document.getElementById("transformer-action").addEventListener("click", function() {
-        var additionalStyles = [
-            "/css/empty-styles.css",
-            "/css/blue-bg-styles.css",
-            "/css/green-bg-styles.css",
-            "/css/orange-bg-styles.css",
-            "/css/purple-bg-styles.css",
+    document.getElementById("theme-changer").addEventListener("click", function() {
+        var colorThemes = [
+            'var(--color-black)',
+            'var(--color-blue)',
+            'var(--color-green)',
+            'var(--color-orange)',
+            'var(--color-purple)',
             
         ];
-    
-        var currentStyle = localStorage.getItem("selectedStyle") || additionalStyles[0];
-        var currentIndex = additionalStyles.indexOf(currentStyle);
-        
-        
-        var nextStyle = additionalStyles[(currentIndex + 1) % additionalStyles.length];
 
-        document.getElementById("transformer-style").setAttribute("href", nextStyle);
+        var root = document.documentElement;
+        var currentTheme = localStorage.getItem("selectedTheme") || colorThemes[0];
+        var currentIndex = colorThemes.indexOf(currentTheme);
 
         
-        localStorage.setItem("selectedStyle", nextStyle);
+        var nextTheme = colorThemes[(currentIndex + 1) % colorThemes.length];
+
+        
+        root.style.setProperty('--color-background', nextTheme);
+
+        
+        localStorage.setItem("selectedTheme", nextTheme);
     });
 </script>
-
-
   
         <nav>
         
@@ -67,8 +67,8 @@
     </header>
              
     
-    <main><p><strong>How It Works</strong>: You can work alone or in a team. We&rsquo;re piloting at <a href="https://slo5.edu.pl">SLO5</a> high school, but we&rsquo;re open to more schools and people. Interested? <a href="mailto:edutransformer@slo5.edu.pl">Contact us</a>.</p>
-<p>Our Team sets themes and reviews submissions. Schools joining us need a lead to review local submissions.</p>
+    <main><p>We&rsquo;re piloting at <a href="https://slo5.edu.pl">SLO5</a> high school, but we&rsquo;re open to more schools and people. Interested? <a href="mailto:edutransformer@slo5.edu.pl">Contact us</a>.</p>
+<p><em>Katarzyna Kołodziej (career advisor), Leszek Janasik (high school principal), Stoigniew Sztank (software expert)</em></p>
 </main>
     <a href="javascript:history.back();">&#8617;</a>
 

@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edu Transformer</title>
     <meta name="description" content="Technology is changing our world rapidly, while education evolves slowly. Don&#39;t just wait – act">
-    <link id="base-style" rel="stylesheet" href="/css/base-styles.css">
+    <link id="base-style" rel="stylesheet" href="/css/styles.css">
     <script>
-    
-    var savedStyle = localStorage.getItem("selectedStyle") || "/css/empty-styles.css";
-    
-    var linkElement = document.createElement("link");
-    linkElement.id = "transformer-style";
-    linkElement.rel = "stylesheet";
-    linkElement.href = savedStyle;
-    
-    document.head.appendChild(linkElement);
+    document.addEventListener("DOMContentLoaded", function() {
+        var root = document.documentElement;
+        
+        
+        var selectedTheme = localStorage.getItem("selectedTheme");
+        
+        
+        if (selectedTheme) {
+            root.style.setProperty('--color-background', selectedTheme);
+        }
+    });
 </script>
-
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QXXGG6VL1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -30,33 +30,33 @@
 </head>
 <body>
     <header>        
-        <a href="#" id="transformer-action">T</a>
-<script>    
+        <a href="#" id="theme-changer">T</a>
+<script>
     
-    document.getElementById("transformer-action").addEventListener("click", function() {
-        var additionalStyles = [
-            "/css/empty-styles.css",
-            "/css/blue-bg-styles.css",
-            "/css/green-bg-styles.css",
-            "/css/orange-bg-styles.css",
-            "/css/purple-bg-styles.css",
+    document.getElementById("theme-changer").addEventListener("click", function() {
+        var colorThemes = [
+            'var(--color-black)',
+            'var(--color-blue)',
+            'var(--color-green)',
+            'var(--color-orange)',
+            'var(--color-purple)',
             
         ];
-    
-        var currentStyle = localStorage.getItem("selectedStyle") || additionalStyles[0];
-        var currentIndex = additionalStyles.indexOf(currentStyle);
-        
-        
-        var nextStyle = additionalStyles[(currentIndex + 1) % additionalStyles.length];
 
-        document.getElementById("transformer-style").setAttribute("href", nextStyle);
+        var root = document.documentElement;
+        var currentTheme = localStorage.getItem("selectedTheme") || colorThemes[0];
+        var currentIndex = colorThemes.indexOf(currentTheme);
 
         
-        localStorage.setItem("selectedStyle", nextStyle);
+        var nextTheme = colorThemes[(currentIndex + 1) % colorThemes.length];
+
+        
+        root.style.setProperty('--color-background', nextTheme);
+
+        
+        localStorage.setItem("selectedTheme", nextTheme);
     });
 </script>
-
-
   
         <nav>
         
@@ -68,15 +68,10 @@
     </header>
              
     
-    <main><p>Technology is changing our world rapidly, yet changes in education come slowly.<sup class="reference">    
-    <a href="././abs/2310.0001">1</a>    
-</sup>
- Instead of waiting, we want to act.</p>
-<p>We live by the principle: &lsquo;Engage me, and I will understand&rsquo;. In this fast-changing world, we are all learners.</p>
-<p>We want to understand reality and feel that we have a voice in it. Join us. Think. Explore. And us? We will provide you with support and a <a href="./platform">platform</a> to share your discoveries.</p>
-<p>Check out our themes: <a href="./master">Mindfulness Master</a>, <a href="./integrator">Update Integrator</a>, <a href="./transformer">Lesson Transformer</a>, <a href="./hunter">Hallucination Hunter</a>, <a href="./explorer">Unknown Explorer</a>.</p>
+    <main><p>Technology is changing our world rapidly, yet changes in education come slowly. Instead of waiting, we want to act.</p>
+<p>Themes: <a href="./master">Mindfulness Master</a>, <a href="./integrator">Update Integrator</a>, <a href="./transformer">Lesson Transformer</a>, <a href="./hunter">Hallucination Hunter</a>, <a href="./explorer">Unknown Explorer</a>.</p>
+<p>Workshops: <a href="./workshops">ChatGPT for Teachers</a></p>
 <p>Interested? <a href="./get-involved">Get involved</a>.</p>
-<p><em>Katarzyna Kołodziej (career advisor), Leszek Janasik (high school principal), Stoigniew Sztank (software expert)</em></p>
 </main>
 
 </body>

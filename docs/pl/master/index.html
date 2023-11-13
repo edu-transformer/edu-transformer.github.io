@@ -4,20 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mistrz Uważności: Technologia wspiera uważność</title>
     <meta name="description" content="Technologia zamiast rozpraszać, może nas wspierać w procesie bycia bardziej uważnymi, skupionymi i świadomymi. Odkryjmy, jak wykorzystać ją w edukacji.">
-    <link id="base-style" rel="stylesheet" href="/css/base-styles.css">
+    <link id="base-style" rel="stylesheet" href="/css/styles.css">
     <script>
-    
-    var savedStyle = localStorage.getItem("selectedStyle") || "/css/empty-styles.css";
-    
-    var linkElement = document.createElement("link");
-    linkElement.id = "transformer-style";
-    linkElement.rel = "stylesheet";
-    linkElement.href = savedStyle;
-    
-    document.head.appendChild(linkElement);
+    document.addEventListener("DOMContentLoaded", function() {
+        var root = document.documentElement;
+        
+        
+        var selectedTheme = localStorage.getItem("selectedTheme");
+        
+        
+        if (selectedTheme) {
+            root.style.setProperty('--color-background', selectedTheme);
+        }
+    });
 </script>
-
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QXXGG6VL1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -29,33 +29,33 @@
 </head>
 <body>
     <header>        
-        <a href="#" id="transformer-action">T</a>
-<script>    
+        <a href="#" id="theme-changer">T</a>
+<script>
     
-    document.getElementById("transformer-action").addEventListener("click", function() {
-        var additionalStyles = [
-            "/css/empty-styles.css",
-            "/css/blue-bg-styles.css",
-            "/css/green-bg-styles.css",
-            "/css/orange-bg-styles.css",
-            "/css/purple-bg-styles.css",
+    document.getElementById("theme-changer").addEventListener("click", function() {
+        var colorThemes = [
+            'var(--color-black)',
+            'var(--color-blue)',
+            'var(--color-green)',
+            'var(--color-orange)',
+            'var(--color-purple)',
             
         ];
-    
-        var currentStyle = localStorage.getItem("selectedStyle") || additionalStyles[0];
-        var currentIndex = additionalStyles.indexOf(currentStyle);
-        
-        
-        var nextStyle = additionalStyles[(currentIndex + 1) % additionalStyles.length];
 
-        document.getElementById("transformer-style").setAttribute("href", nextStyle);
+        var root = document.documentElement;
+        var currentTheme = localStorage.getItem("selectedTheme") || colorThemes[0];
+        var currentIndex = colorThemes.indexOf(currentTheme);
 
         
-        localStorage.setItem("selectedStyle", nextStyle);
+        var nextTheme = colorThemes[(currentIndex + 1) % colorThemes.length];
+
+        
+        root.style.setProperty('--color-background', nextTheme);
+
+        
+        localStorage.setItem("selectedTheme", nextTheme);
     });
 </script>
-
-
   
         <nav>
         

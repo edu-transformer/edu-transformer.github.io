@@ -1,0 +1,140 @@
+:root {
+    /* Base and neutral */
+    --color-black-dark: #000000;
+    --color-black: #0d1117;
+    --color-black-light: #21262d;
+    --color-white: white;
+    --color-grey-light: rgb(210, 216, 222);
+
+    /* Trustful */
+    --color-blue: #0750E7;
+    --color-blue-light: #096BDE;
+    --color-blue-dark: #020884;
+
+    /* Harmonic */
+    --color-green: #087F23;
+    --color-green-light: #80E27E;
+    --color-green-dark: #005400;
+
+    /* Energetic */
+    --color-orange: #A54E00;
+    --color-orange-light: #FFC947;
+    --color-orange-dark: #8D3B00;
+
+    /* Modern */
+    --color-purple: #6A0080;
+    --color-purple-light: #9C27B0;
+    --color-purple-dark: #3A0053;
+
+    /* Background and Font */
+    --color-background: var(--color-black);
+    --color-font: var(--color-white);
+    --color-font-hover: var(--color-grey-light);
+
+    --font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    --font-size: calc(0.95em + 1vw);    
+    --font-size-small: 80%;
+    --font-size-x-small: 60%;
+    --line-height: calc(1.3em + 0.1vw);
+    --spacing: 0.75em;
+}
+
+html {
+    background: var(--color-background);
+    font-size: 16px;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-font);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    overflow-x: hidden;
+    margin: 0.5em var(--spacing) 4.5em var(--spacing);
+    position: relative;
+}
+
+@media (min-width: 64em) and (hover: hover) and (pointer: fine) {
+    :root {
+        --font-size: min(calc(1em + 1vw), 36px);        
+        --line-height: 1.3em;
+    }
+    body {
+        max-width: 50ch;
+    }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--color-font);
+    font-weight: 700;
+}
+
+h3 {
+    margin-bottom: 5px;
+}
+
+a {
+    color: var(--color-font);
+    font-weight: 700;
+    letter-spacing: normal;
+}
+
+a:hover {
+    color: var(--color-font-hover);
+}
+
+em,i {
+    font-style: italic;
+}
+
+strong,b {
+    color: var(--color-font);
+    font-weight: 700;
+}
+
+.active-lang {
+    font-weight: bold;
+}
+
+header a:not(.active-lang) {
+    font-weight: normal;
+}
+
+header a {
+    font-size: var(--font-size-small);
+    text-decoration:none;
+}
+
+#theme-changer {
+    display: inline-block; 
+    font-weight: bold;
+    border: 1px dotted;
+    padding: 0.1em 0.25em;
+    border-radius: 2px;
+    line-height: 1;
+}
+
+nav {
+    display: inline-block; 
+    position: absolute;
+    right: var(--spacing);
+}
+
+.reference {
+    font-size: var(--font-size-x-small); 
+    line-height: 1;
+}
+
+.meta {
+    font-size: var(--font-size-small);
+    font-style: italic;
+    margin-top: -5px;
+}
+
+hr {
+    width: 30%;
+    margin-left: 0;
+    margin-right: 70%;
+    display: block;
+}

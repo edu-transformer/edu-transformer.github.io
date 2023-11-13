@@ -1,0 +1,13 @@
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var root = document.documentElement;
+        
+        // Load the selected theme from localStorage
+        var selectedTheme = localStorage.getItem("selectedTheme");
+        
+        // Check if a theme was previously selected and apply it
+        if (selectedTheme) {
+            root.style.setProperty('--color-background', selectedTheme);
+        }
+    });
+</script>

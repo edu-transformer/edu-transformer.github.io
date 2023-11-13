@@ -1,0 +1,27 @@
+<a href="#" id="theme-changer">T</a>
+<script>
+    // Add an event listener to the "T" button
+    document.getElementById("theme-changer").addEventListener("click", function() {
+        var colorThemes = [
+            'var(--color-black)',
+            'var(--color-blue)',
+            'var(--color-green)',
+            'var(--color-orange)',
+            'var(--color-purple)',
+            // ... add other color variables if available
+        ];
+
+        var root = document.documentElement;
+        var currentTheme = localStorage.getItem("selectedTheme") || colorThemes[0];
+        var currentIndex = colorThemes.indexOf(currentTheme);
+
+        // Get the next theme. If current theme is the last one, get the first theme from the list.
+        var nextTheme = colorThemes[(currentIndex + 1) % colorThemes.length];
+
+        // Apply the next theme
+        root.style.setProperty('--color-background', nextTheme);
+
+        // Save the selected theme to localStorage
+        localStorage.setItem("selectedTheme", nextTheme);
+    });
+</script>

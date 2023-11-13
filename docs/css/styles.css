@@ -1,28 +1,30 @@
 :root {
     /* Base and neutral */
-    --color-black: black;
+    --color-black-dark: #000000;
+    --color-black: #0d1117;
+    --color-black-light: #21262d;
     --color-white: white;
     --color-grey-light: rgb(210, 216, 222);
 
     /* Trustful */
-    --color-blue: #2196F3;
-    --color-blue-light: #6EC6FF;
-    --color-blue-dark: #0069C0;
+    --color-blue: #0750E7;
+    --color-blue-light: #096BDE;
+    --color-blue-dark: #020884;
 
     /* Harmonic */
-    --color-green: #4CAF50;
+    --color-green: #087F23;
     --color-green-light: #80E27E;
-    --color-green-dark: #087F23;
+    --color-green-dark: #005400;
 
     /* Energetic */
-    --color-orange: #FF9800;
+    --color-orange: #A54E00;
     --color-orange-light: #FFC947;
-    --color-orange-dark: #C66900;
+    --color-orange-dark: #8D3B00;
 
     /* Modern */
-    --color-purple: #9C27B0;
-    --color-purple-light: #D05CE3;
-    --color-purple-dark: #6A0080;
+    --color-purple: #6A0080;
+    --color-purple-light: #9C27B0;
+    --color-purple-dark: #3A0053;
 
     /* Background and Font */
     --color-background: var(--color-black);
@@ -104,7 +106,7 @@ header a {
     text-decoration:none;
 }
 
-#transformer-action {
+#theme-changer {
     display: inline-block; 
     font-weight: bold;
     border: 1px dotted;
